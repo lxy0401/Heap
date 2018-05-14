@@ -13,3 +13,23 @@ typedef struct Heap
     Compare cmp;
 }Heap;
 
+//初始化，决定是大堆还是小堆
+void HeapInit(Heap* heap,Compare cmp);
+
+//销毁堆
+void HeapDestroy(Heap* heap);
+
+//向堆中插入元素
+void HeapInsert(Heap* heap ,HeapType value);
+
+//取堆顶元素
+int HeapRoot(Heap* heap,HeapType* value);
+
+//删除堆顶元素
+void HeapErase(Heap* heap);
+
+//给一个数组，将数组构建成堆，这个堆通过heap来表示
+void HeapCreate(Heap* heap,HeapType arry[],size_t size);
+
+//实现堆排序
+void HeapSort(HeapType arry[],size_t size);
